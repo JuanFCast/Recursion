@@ -4,7 +4,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		//System.out.println(sumatoria(5));
-		System.out.println(sumaRecur(5));
+		//System.out.println(sumaRecur(5));
+		System.out.println(factorial(-1));
+		System.out.println(factorialRecur(-1));
 	}
 	
 	// sumar los números del 1 al 5
@@ -37,6 +39,36 @@ public class Main {
 	
 	
 	// TAREA PARA EL MIERCOLES factorial iterativo y recursivo
+	public static int factorial(int n) {
+		int fact = 1;
+        int i = 2;
+        if (n>=0) {
+        	while (i <= n) {
+            	fact *= i;
+                i++;
+            }
+            return fact;
+		}else {
+			return n;
+		}
+	}
+	
+	public static int factorialRecur(int n) {
+		if (n>=0) {
+			if (n==0) {
+				return 1;
+			}else {
+				return n * factorial(n-1);
+			}
+		}else {
+			return n;
+		}
+		
+	}
+	
+	
+	
+	
 	
 
 }
